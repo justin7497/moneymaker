@@ -1,0 +1,6 @@
+name = "moneymaker-api"
+main = "workers/shopping-api.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+# Secrets are set via: wrangler secret put NAVER_CLIENT_ID / NAVER_CLIENT_SECRET

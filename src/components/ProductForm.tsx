@@ -66,7 +66,7 @@ export function ProductForm({ values, onChange, onSubmit }: Props) {
 
   return (
     <form className="panel form" onSubmit={handleSubmit}>
-      <h2>상품 정보</h2>
+      <h2>2. 상품 정보</h2>
 
       <label>
         상품명 *
@@ -88,13 +88,16 @@ export function ProductForm({ values, onChange, onSubmit }: Props) {
       </label>
 
       <label>
-        제휴 URL
+        상품/제휴 URL
         <input
           type="url"
           value={values.affiliateUrl}
           onChange={(e) => update("affiliateUrl", e.target.value)}
-          placeholder="https://..."
+          placeholder="쇼핑 검색 링크 또는 쇼핑커넥트 수수료 링크"
         />
+        <span className="field-hint">
+          검색으로 채운 뒤, 쇼핑커넥트 수수료 링크로 바꿔 넣으면 됩니다.
+        </span>
       </label>
 
       <label>

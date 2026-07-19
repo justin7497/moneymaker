@@ -1,6 +1,6 @@
 export type ProductTone = "friendly" | "review" | "deal";
 
-export type ProductSource = "manual" | "brand_connect";
+export type ProductSource = "manual" | "brand_connect" | "naver_shopping";
 
 export type ProductDraft = {
   name: string;
