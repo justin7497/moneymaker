@@ -42,11 +42,10 @@ export function ProductSearch({ onSelect }: Props) {
 
   return (
     <section className="panel search-panel">
-      <h2>1. 네이버 쇼핑 검색</h2>
+      <h2>보조 · 네이버 쇼핑 검색</h2>
       <p className="muted">
-        상품명을 입력하면 이미지·최저가·상품 링크를 가져와 아래 폼에 자동
-        입력합니다. (쇼핑커넥트 수수료 링크는 검색 후 제휴 URL에 직접 넣을 수
-        있어요)
+        브랜드커넥트 URL이 없을 때만 사용하세요. 일반 쇼핑 검색 결과라 수수료
+        링크는 포함되지 않습니다.
       </p>
 
       <form className="search-row" onSubmit={handleSearch}>

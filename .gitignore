@@ -14,6 +14,10 @@ dist-ssr
 .env
 .env.*
 !.env.example
+tmp-*.html
+tmp-*.js
+tmp-*.json
+tmp-chunks/
 
 # Editor directories and files
 .vscode/*

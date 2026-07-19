@@ -94,6 +94,12 @@ export function toNaverBlogFormat(draft: ProductDraft): NaverBlogPost {
 
   const parts: string[] = [];
 
+  if (draft.source === "brand_connect") {
+    parts.push(
+      "<p><b>이 포스팅은 네이버 쇼핑 커넥트 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다.</b></p>",
+    );
+  }
+
   parts.push(`<p>${introForTone(draft.tone, name)}</p>`);
 
   if (reviewNote) {

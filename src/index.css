@@ -450,3 +450,47 @@ fieldset legend {
   font-weight: 700;
   color: var(--focus);
 }
+
+.bc-loaded {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f7fbf8;
+}
+
+.bc-loaded img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eef2f5;
+}
+
+.bc-loaded strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.secondary-tools {
+  margin-bottom: 16px;
+}
+
+button.linkish {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--focus);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button.linkish:hover {
+  text-decoration: underline;
+}

@@ -5,23 +5,29 @@
 ## 기능
 
 - **네이버 브랜드커넥트**
-  - 네이버 쇼핑 검색 API로 상품명·이미지·최저가·링크 자동 입력
-  - 네이버 블로그 초안 생성·복사
+  - 쇼핑커넥트 상품 URL 붙여넣기 → 상품명·가격·이미지·수수료·제휴링크 수집
+  - 네이버 블로그 초안 생성·복사 (수수료 고지 문구 포함)
+  - 보조: 네이버 쇼핑 검색 API
 - **인스타그램 / 유튜브**: 준비 중
 
 ## 로컬 실행
 
-1. [네이버 개발자 센터](https://developers.naver.com/)에서 애플리케이션 등록 후 **검색** API 사용 설정
-2. `.env.example`을 복사해 `.env` 작성
+1. `.env.example`을 복사해 `.env` 작성
+2. 브랜드커넥트에 로그인한 뒤 브라우저 Cookie를 `BRANDCONNECT_COOKIE`에 넣기
+3. (선택) 쇼핑 검색용 `NAVER_CLIENT_ID` / `NAVER_CLIENT_SECRET`
 
 ```bash
 cp .env.example .env
-# NAVER_CLIENT_ID / NAVER_CLIENT_SECRET 입력
 npm install
 npm run dev
 ```
 
-개발 서버의 `/api/shopping/search`가 네이버 API를 프록시합니다. (시크릿은 브라우저에 노출되지 않음)
+상품 상세 URL 예:
+`https://brandconnect.naver.com/{spaceId}/affiliate/products/{productId}`
+
+개발 서버 API:
+- `/api/brandconnect/product?url=...`
+- `/api/shopping/search?q=...`
 
 ## 프로덕션 API (Cloudflare Worker)
 
