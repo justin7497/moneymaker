@@ -22,11 +22,13 @@ npm install
 npm run dev
 ```
 
-상품 상세 URL 예:
-`https://brandconnect.naver.com/{spaceId}/affiliate/products/{productId}`
+상품 URL 예:
+- 목록: `https://brandconnect.naver.com/{spaceId}/affiliate/products`
+- 상세: `https://brandconnect.naver.com/{spaceId}/affiliate/products/{productId}`
 
 개발 서버 API:
-- `/api/brandconnect/product?url=...`
+- `/api/brandconnect/products?url=...&q=검색어` (목록 검색)
+- `/api/brandconnect/product?url=...` (상세 1건)
 - `/api/shopping/search?q=...`
 
 ## 프로덕션 API (Cloudflare Worker)

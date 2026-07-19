@@ -451,6 +451,32 @@ fieldset legend {
   color: var(--focus);
 }
 
+.bc-form {
+  display: grid;
+  gap: 10px;
+}
+
+.bc-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.bc-form input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  background: #fff;
+}
+
+.bc-form input:focus {
+  outline: 2px solid color-mix(in srgb, var(--focus) 40%, white);
+  border-color: var(--focus);
+}
+
 .bc-loaded {
   display: grid;
   grid-template-columns: 72px 1fr;
